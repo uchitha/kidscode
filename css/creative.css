@@ -64,8 +64,14 @@ p {
     color: rgba(255,255,255,.7);
 }
 
+.text-faded-lg-i {
+    color: rgba(255,255,255,.7);
+    font-size: 20px;
+    font-style: italic
+}
+
 section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 aside {
@@ -208,7 +214,7 @@ header .header-content .header-content-inner p {
     margin-bottom: 50px;
     font-size: 16px;
     font-weight: 300;
-    color: rgba(255,255,255,.7);
+    color: rgba(255,255,255);
 }
 
 @media(min-width:768px) {
