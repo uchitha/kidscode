@@ -473,6 +473,23 @@
                 };
 
                 responseObj.comments = $("#comments").val();
+				
+				$.ajax({
+                    contentType: 'application/json',
+                    data: {
+                        "name" : "Thumindu",
+                        "email": "rchamila@gmail.com"
+                    },
+                    dataType : "json",
+                    type: "POST",
+                    url : "http://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration",
+                    success : function (data) {
+                        console.log(data);
+                    },
+                    error: function () {
+                        console.error("Sending failed");
+                    }
+                });
 
                 console.log(responseObj);
 
