@@ -328,7 +328,8 @@
                             <hr class="light">
                             <p class="text-faded">We are a group of industry professionals with a background on Computer Engineering. We work full
                             time on large scale software systems development here in Perth. We are all passionate about technology and dissapointed at
-                            the same time about the lack of enthusiasm in the Australian community in general. </p>
+                            the same time about the lack of enthusiasm in the Australian community towards computer science and programming. That's why we are trying to 
+                            do something about it.</p>
                             <p>Most importantly, we are loving parents to small kids. Kids who are excited with no reservations when it comes to learning new experiences and expressing themselves in novel ways. </p>
                             <a href="#contact" class="btn btn-default btn-xl wow tada">Register for free.</a>
                     </div>
@@ -477,7 +478,28 @@
 
                 $("#successMsg").show();
 
+                sendMessage('Message from AusKids')
+
                 return false;
+            }
+
+            function sendMessage(msg) {
+                $.ajax({
+                    type: 'POST',
+                    data: {
+                        name: 'Thumindu',
+                        email: "info@tnuit.com.au"
+                    },
+                    //url: 'http://localhost:63070/api/mail/kidscoderegistration',
+                    url: 'http://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration',
+                    contentType: "application/json",
+                    success: function(result) {
+                        console.log(result);
+                    },
+                    error: function(xhr,status,error) {
+                        console.error(error);
+                    }
+                });
             }
         </script>
     </body>
