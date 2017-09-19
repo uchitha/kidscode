@@ -479,8 +479,11 @@
                     responseObj.course = selection.val();
                 };
 
-                responseObj.comments = $("#comments").val();
+                responseObj.comment = $("#comments").val();
 				
+                $("#successMsg").hide();
+                $("#failureMsg").hide();
+
                 $.ajax({
                     contentType: 'application/json',
                     data: JSON.stringify(responseObj),
