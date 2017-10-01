@@ -11,9 +11,9 @@
         <!-- Bootstrap Core CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
         <!-- Custom Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
         rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
         rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
         <!-- Plugin CSS -->
@@ -124,7 +124,53 @@
         </section>
         <section class="bg-primary" id="services">
             <div class="container">
-             
+              <!--  <div class="row no-gutter">
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="#" class="portfolio-box">
+                        <img src="img/code/scratch.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="#" class="portfolio-box">
+                         <img src="img/code/starwars.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="#" class="portfolio-box">
+                        <img src="img/code/angry.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div> -->
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 text-center">
                         <h2 class="section-heading">We've got what it takes.</h2>
@@ -219,11 +265,62 @@
                         </div>
                     </a>
                     </div>
-                   
+                    <!--<div class="col-lg-4 col-sm-6">
+                        <a href="#" class="portfolio-box">
+                        <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="#" class="portfolio-box">
+                        <img src="img/portfolio/5.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="#" class="portfolio-box">
+                        <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>-->
                 </div>
             </div>
         </section>
-     
+        <!--<aside class="bg-dark">
+            <div class="container text-center">
+                <div class="call-to-action">
+                    <h2>Free stuff to try at home!</h2>
+                    <a href="#" class="btn btn-default btn-xl">Download Now!</a>
+                </div>
+            </div>
+        </aside>-->
         <section id="team" class="bg-primary">
             <div class="container">
                 <div class="row">
@@ -232,7 +329,8 @@
                             <hr class="light">
                             <p class="text-faded">We are a group of industry professionals with a background on Computer Engineering. We work full
                             time on large scale software systems development here in Perth. We are all passionate about technology and dissapointed at
-                            the same time about the lack of enthusiasm in the Australian community in general. </p>
+                            the same time about the lack of enthusiasm in the Australian community towards computer science and programming. That's why we are trying to 
+                            do something about it.</p>
                             <p>Most importantly, we are loving parents to small kids. Kids who are excited with no reservations when it comes to learning new experiences and expressing themselves in novel ways. </p>
                             <a href="#contact" class="btn btn-default btn-xl wow tada">Register for free.</a>
                     </div>
@@ -254,7 +352,18 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="row" style="display:none" id="failureMsg">
+                                <div class="col-lg-12">
+                                    <div class="alert alert-danger text-center" >
+                                      <strong>Sorry!</strong> We failed to deliver the message. Can you please try again? 
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="row" style="display:none" id="progressBar">
+                                 <div class="progress-bar progress-bar-striped active" role="progressbar"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                                    Sending message
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <label for="name">Kids Name</label>
@@ -269,7 +378,7 @@
                             <div class="row">
                             <div class="col-lg-4">
                                     <label for="mail">Your Name</label>
-                                    <input type="email" class="form-control" id="name">
+                                    <input type="email" class="form-control" id="name" >
                                 </div>
                                 <div class="col-lg-4">
                                     <label for="mail">Contact Email</label>
@@ -277,7 +386,7 @@
                                 </div>
                                  <div class="col-lg-4">
                                     <label for="phone">Contact Phone</label>
-                                    <input type="text" class="form-control" id="phone">
+                                    <input type="text" class="form-control" id="phone" >
                                 </div>
                             </div>
                               <br/>
@@ -313,12 +422,12 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <label for="message">Your thoughts and suggestions</label>
-                                    <textarea class="form-control" rows="6" id="comments" ></textarea>
+                                    <textarea class="form-control" rows="6" id="comments" required=""></textarea>
                                 </div>
                             </div>
 <br/>
                             <div class="row">
-                                 <!-- <a href="#" class="btn btn-primary btn-xl" onclick="javascript:return submitForm();">Send</a>-->
+                                  <!--<a href="#" class="btn btn-primary btn-xl" onclick="javascript:return submitForm();">Send</a>-->
 								   <button href="#" class="btn btn-primary btn-xl" type="submit">Send</button>
                             </div>
                         </form>
@@ -390,44 +499,64 @@
 				  }
 				});
 			});
-            function submitForm() {
-  
+              function submitForm() {
                 var responseObj = {};
-                responseObj.kidsName = $("#kidsname").val();
-                responseObj.kidsAge = $("#kidsage").val();
-                responseObj.name = $("#name").val();
+                responseObj.name = $("#kidsname").val();
+                responseObj.age = $("#kidsage").val();
+                responseObj.parentsName = $("#name").val();
                 responseObj.email = $("#email").val();
                 responseObj.phone = $("#phone").val();
 
                 var selection = $("#prgSelection input[type='radio']:checked");
                 if (selection.length > 0) {
-                    responseObj.prg = selection.val();
+                    responseObj.course = selection.val();
                 };
 
-                responseObj.comments = $("#comments").val();
+                responseObj.comment = $("#comments").val();
 				
-				$.ajax({
+                $("#successMsg").hide();
+                $("#failureMsg").hide();
+                $("#progressBar").show();
+                $.ajax({
                     contentType: 'application/json',
-                    data: {
-                        "name" : "Thumindu",
-                        "email": "rchamila@gmail.com"
-                    },
+                    data: JSON.stringify(responseObj),
                     dataType : "json",
                     type: "POST",
-                    url : "http://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration",
+                    //url : "http://localhost:63070/api/mail/kidscoderegistration",
+                    url : "https://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration",
                     success : function (data) {
                         console.log(data);
+                        $("#successMsg").show();
+                          $("#progressBar").hide();
                     },
                     error: function () {
                         console.error("Sending failed");
+                        $("#failureMsg").show();
+                          $("#progressBar").hide();
                     }
                 });
-
-                console.log(responseObj);
-
-                $("#successMsg").show();
-
                 return false;
+            }
+
+            function sendMessage(msg) {
+                var model =  {
+                        name: "Thumindu",
+                        email: "infotnuit.com.au"
+                    };
+                $.ajax({
+                    type: 'POST',
+                    data: msg,
+                    url: 'http://localhost:63070/api/mail/kidscoderegistration',
+                    //url: 'http://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration',
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function(result) {
+                        console.log(result);
+                    },
+                    error: function(xhr,status,error) {
+                        console.error(error);
+                    }
+                });
             }
         </script>
     </body>
