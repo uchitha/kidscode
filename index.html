@@ -124,53 +124,7 @@
         </section>
         <section class="bg-primary" id="services">
             <div class="container">
-              <!--  <div class="row no-gutter">
-                    <div class="col-lg-4 col-sm-6">
-                        <a href="#" class="portfolio-box">
-                        <img src="img/code/scratch.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a href="#" class="portfolio-box">
-                         <img src="img/code/starwars.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a href="#" class="portfolio-box">
-                        <img src="img/code/angry.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                </div> -->
+             
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 text-center">
                         <h2 class="section-heading">We've got what it takes.</h2>
@@ -265,62 +219,11 @@
                         </div>
                     </a>
                     </div>
-                    <!--<div class="col-lg-4 col-sm-6">
-                        <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    </div>-->
+                   
                 </div>
             </div>
         </section>
-        <!--<aside class="bg-dark">
-            <div class="container text-center">
-                <div class="call-to-action">
-                    <h2>Free stuff to try at home!</h2>
-                    <a href="#" class="btn btn-default btn-xl">Download Now!</a>
-                </div>
-            </div>
-        </aside>-->
+     
         <section id="team" class="bg-primary">
             <div class="container">
                 <div class="row">
@@ -343,7 +246,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <div class="contact-form">
                         <h2 class="section-heading">Let's Get In Touch!</h2>
-                        <form role="form" class=".form-inline">
+                        <form role="form" class=".form-inline" id="contact-form" name="contact-form">
                             <div class="row" style="display:none" id="successMsg">
                                 <div class="col-lg-12">
                                     <div class="alert alert-success text-center" >
@@ -355,26 +258,26 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <label for="name">Kids Name</label>
-                                    <input type="text" class="form-control" id="kidsname">
+                                    <input type="text" class="form-control" id="kidsname" name="kidsname">
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="age">Kids Age</label>
-                                    <input type="text" class="form-control" id="kidsage">
+                                    <input type="text" class="form-control" id="kidsage" name="kidsage">
                                 </div>
                             </div>
                             <br/>
                             <div class="row">
                             <div class="col-lg-4">
                                     <label for="mail">Your Name</label>
-                                    <input type="email" class="form-control" id="name" required="">
+                                    <input type="email" class="form-control" id="name">
                                 </div>
                                 <div class="col-lg-4">
                                     <label for="mail">Contact Email</label>
-                                    <input type="email" class="form-control" id="email" required="">
+                                    <input type="email" class="form-control" id="email" name="email">
                                 </div>
                                  <div class="col-lg-4">
                                     <label for="phone">Contact Phone</label>
-                                    <input type="text" class="form-control" id="phone" required="">
+                                    <input type="text" class="form-control" id="phone">
                                 </div>
                             </div>
                               <br/>
@@ -410,12 +313,13 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <label for="message">Your thoughts and suggestions</label>
-                                    <textarea class="form-control" rows="6" id="comments" required=""></textarea>
+                                    <textarea class="form-control" rows="6" id="comments" ></textarea>
                                 </div>
                             </div>
 <br/>
                             <div class="row">
-                                  <a href="#" class="btn btn-primary btn-xl" onclick="javascript:return submitForm();">Send</a>
+                                 <!-- <a href="#" class="btn btn-primary btn-xl" onclick="javascript:return submitForm();">Send</a>-->
+								   <button href="#" class="btn btn-primary btn-xl" type="submit">Send</button>
                             </div>
                         </form>
                 </div>
@@ -450,6 +354,7 @@
         </section>
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
+		<script src="js/jquery.validate.js"></script>
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
         <!-- Plugin JavaScript -->
@@ -459,7 +364,34 @@
         <!-- Custom Theme JavaScript -->
         <script src="js/creative.js"></script>
         <script>
+			$().ready(function() {			 
+			  $("#contact-form").validate({
+				rules: { 
+					kidsname: {
+						required:true
+					},
+					kidsage: {
+						required:true,
+						number: true
+					},
+					email :{
+						required:true,
+						email: true
+					}
+				},
+				messages: {
+					kidsname: "Please enter your kid's name",
+					kidsage : "Please enter your kid's age",
+					email: "Please enter a valid email address"
+				},
+				errorClass : "form-error",
+				submitHandler: function(form) {
+					submitForm();
+				  }
+				});
+			});
             function submitForm() {
+  
                 var responseObj = {};
                 responseObj.kidsName = $("#kidsname").val();
                 responseObj.kidsAge = $("#kidsage").val();

@@ -487,3 +487,8 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
+label.form-error{
+	color:#f05f40;
+	font-size:11px
+}
