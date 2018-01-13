@@ -510,13 +510,6 @@
 			$().ready(function() {			 
 			  $("#contact-form").validate({
 				rules: { 
-					kidsname: {
-						required:true
-					},
-					kidsage: {
-						required:true,
-						number: true
-					},
 					email :{
 						required:true,
 						email: true
@@ -547,28 +540,29 @@
                 };
 
                 responseObj.comment = $("#comments").val();
+                console.log(responseObj);
 				
                 $("#successMsg").hide();
                 $("#failureMsg").hide();
                 $("#progressBar").show();
-                $.ajax({
-                    contentType: 'application/json',
-                    data: JSON.stringify(responseObj),
-                    dataType : "json",
-                    type: "POST",
-                    //url : "http://localhost:63070/api/mail/kidscoderegistration",
-                    url : "https://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration",
-                    success : function (data) {
-                        console.log(data);
-                        $("#successMsg").show();
-                          $("#progressBar").hide();
-                    },
-                    error: function () {
-                        console.error("Sending failed");
-                        $("#failureMsg").show();
-                          $("#progressBar").hide();
-                    }
-                });
+                // $.ajax({
+                //     contentType: 'application/json',
+                //     data: JSON.stringify(responseObj),
+                //     dataType : "json",
+                //     type: "POST",
+                //     url : "http://localhost:63070/api/mail/kidscoderegistration",
+                //     //url : "https://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration",
+                //     success : function (data) {
+                //         console.log(data);
+                //         $("#successMsg").show();
+                //           $("#progressBar").hide();
+                //     },
+                //     error: function () {
+                //         console.error("Sending failed");
+                //         $("#failureMsg").show();
+                //           $("#progressBar").hide();
+                //     }
+                // });
                 return false;
             }
 
@@ -580,8 +574,8 @@
                 $.ajax({
                     type: 'POST',
                     data: msg,
-                    //url: 'http://localhost:63070/api/mail/kidscoderegistration',
-                    url: 'http://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration',
+                    url: 'http://localhost:63070/api/mail/kidscoderegistration',
+                    //url: 'http://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration',
                     contentType: "application/json",
                     dataType: "json",
                     success: function(result) {
