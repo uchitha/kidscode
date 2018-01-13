@@ -545,24 +545,24 @@
                 $("#successMsg").hide();
                 $("#failureMsg").hide();
                 $("#progressBar").show();
-                // $.ajax({
-                //     contentType: 'application/json',
-                //     data: JSON.stringify(responseObj),
-                //     dataType : "json",
-                //     type: "POST",
-                //     url : "http://localhost:63070/api/mail/kidscoderegistration",
-                //     //url : "https://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration",
-                //     success : function (data) {
-                //         console.log(data);
-                //         $("#successMsg").show();
-                //           $("#progressBar").hide();
-                //     },
-                //     error: function () {
-                //         console.error("Sending failed");
-                //         $("#failureMsg").show();
-                //           $("#progressBar").hide();
-                //     }
-                // });
+                $.ajax({
+                    contentType: 'application/json',
+                    data: JSON.stringify(responseObj),
+                    dataType : "json",
+                    type: "POST",
+                    url : "http://localhost:63070/api/mail/kidscoderegistration",
+                    //url : "https://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration",
+                    success : function (data) {
+                        console.log(data);
+                        $("#successMsg").show();
+                          $("#progressBar").hide();
+                    },
+                    error: function () {
+                        console.error("Sending failed");
+                        $("#failureMsg").show();
+                          $("#progressBar").hide();
+                    }
+                });
                 return false;
             }
 
