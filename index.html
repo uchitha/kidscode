@@ -241,8 +241,9 @@
                                     <hr class="light">
                                     <p>Classes are conducted once per week. A date will be decided according to your needs after registration.</p>
                                     <p>Each class runs for 1 hour. No more than 6 students per class</p>
-                                    <p>Fees are paid per term. A term runs for 10 weeks and priced at $250. That's $25 per session, cheaper than a typical music lesson.</p>
-                                    <p><b>If your child isn't inspired after just one class, it's free!</b></p>
+                                    <p>Fees are paid per term. A term runs for 10 weeks and priced at $250. That's $25 per 1 hour of learning, cheaper than any music lesson.</p>
+                                    <p><b>If your child isn't inspired after the first session, full money back gurantee!</b></p>
+                                    <a href="#contact" class="btn btn-default btn-xl wow tada">Register for free.</a>
                                 </div>
                             </div>
                 </div>
@@ -510,14 +511,14 @@
 			$().ready(function() {			 
 			  $("#contact-form").validate({
 				rules: { 
-					email :{
-						required:true,
-						email: true
-					}
+					
+                    kidsage: {
+                        required: true
+                    }
 				},
 				messages: {
-					kidsname: "Please enter your kid's name",
-					kidsage : "Please enter your kid's age",
+					kidsname: "Please enter your kids name",
+					kidsage : "Please enter your kids age",
 					email: "Please enter a valid email address"
 				},
 				errorClass : "form-error",
@@ -534,13 +535,20 @@
                 responseObj.email = $("#email").val();
                 responseObj.phone = $("#phone").val();
 
+                // responseObj.name = 'f';
+                // responseObj.age = 8;
+                // responseObj.parentsName = 'f';
+                // responseObj.email = 'fff';
+                // responseObj.phone = 04040;
+
+
                 var selection = $("#prgSelection input[type='radio']:checked");
                 if (selection.length > 0) {
                     responseObj.course = selection.val();
                 };
 
                 responseObj.comment = $("#comments").val();
-                console.log(responseObj);
+                console.log(JSON.stringify(responseObj));
 				
                 $("#successMsg").hide();
                 $("#failureMsg").hide();
@@ -548,10 +556,9 @@
                 $.ajax({
                     contentType: 'application/json',
                     data: JSON.stringify(responseObj),
-                    dataType : "json",
                     type: "POST",
-                    //url : "http://localhost:63070/api/mail/kidscoderegistration",
-                    url : "https://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration",
+                    url : "http://localhost:63070/api/mail/kidscoderegistration",
+                    //url : "https://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration",
                     success : function (data) {
                         console.log(data);
                         $("#successMsg").show();
@@ -566,26 +573,6 @@
                 return false;
             }
 
-            function sendMessage(msg) {
-                var model =  {
-                        name: "Thumindu",
-                        email: "infotnuit.com.au"
-                    };
-                $.ajax({
-                    type: 'POST',
-                    data: msg,
-                    url: 'http://localhost:63070/api/mail/kidscoderegistration',
-                    //url: 'http://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration',
-                    contentType: "application/json",
-                    dataType: "json",
-                    success: function(result) {
-                        console.log(result);
-                    },
-                    error: function(xhr,status,error) {
-                        console.error(error);
-                    }
-                });
-            }
         </script>
 		<!-- Global Site Tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107428270-1"></script>
