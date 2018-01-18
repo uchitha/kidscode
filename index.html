@@ -561,8 +561,8 @@
                     contentType: 'application/json',
                     data: JSON.stringify(responseObj),
                     type: "POST",
-                    url : "http://localhost:63070/api/mail/kidscoderegistration",
-                    //url : "https://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration",
+                    //url : "http://localhost:63070/api/mail/kidscoderegistration",
+                    url : "https://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration",
                     success : function (data) {
                         console.log(data);
                         $("#successMsg").show();
