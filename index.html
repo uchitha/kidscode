@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     
     <head>
@@ -558,17 +558,25 @@
                 };
 
                 responseObj.comment = $("#comments").val();
-                console.log(JSON.stringify(responseObj));
-				
+                  console.log(JSON.stringify(responseObj));
+
+                  var params = "name=" + responseObj.name +
+                      "&age=" + responseObj.age +
+                      "&parentsName=" + responseObj.parentsName +
+                      "&email=" + responseObj.email +
+                      "&phone=" + responseObj.phone +
+                      "&course=" + responseObj.course +
+                      "&comment=" + responseObj.comment;
+                  
                 $("#successMsg").hide();
                 $("#failureMsg").hide();
                 $("#progressBar").show();
                 $.ajax({
                     contentType: 'application/json',
                     data: JSON.stringify(responseObj),
-                    type: "POST",
-                    //url : "http://localhost:63070/api/mail/kidscoderegistration",
-                    url : "https://tnuapiv2.azurewebsites.net/api/mail/kidscoderegistration",
+                    type: "GET",
+                    //url: "http://localhost:63070/api/mail/registration?" + params,
+                    url : "https://tnuapiv2.azurewebsites.net/api/mail/registration?" + params,
                     success : function (data) {
                         console.log(data);
                         $("#successMsg").show();
