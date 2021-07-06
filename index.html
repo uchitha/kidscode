@@ -580,7 +580,14 @@
                     success : function (data) {
                         console.log(data);
                         $("#successMsg").show();
-                          $("#progressBar").hide();
+                        $("#progressBar").hide();
+                        $("#kidsname").val('');
+                        $("#kidsage").val('');
+                        $("#name").val('');
+                        $("#email").val('');
+                        $("#phone").val('');
+                        $("#comments").val('')
+                        $("#prgSelection input[type='radio']").prop("checked", false);
                     },
                     error: function () {
                         console.error("Sending failed");
