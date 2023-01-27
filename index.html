@@ -41,7 +41,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                       <img src="img\AKC-Logo.png" style="width:10%; float:left; margin:5px"></img>
                     <a class="navbar-brand page-scroll" href="#contact">Start Learning</a>
+                 
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -395,9 +397,11 @@
                                 </div>
                             </div>
                              <div class="row" style="display:none" id="progressBar">
+                                <div class="col-lg-12">
                                  <div class="progress-bar progress-bar-striped active" role="progressbar"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
                                     Sending message
                                 </div>
+                                    </div>
                             </div>
                             <div class="row">
                                     <div class="col-lg-4">
@@ -555,6 +559,9 @@
                 var selection = $("#prgSelection input[type='radio']:checked");
                 if (selection.length > 0) {
                     responseObj.course = selection.val();
+                }
+                else{
+                    responseObj.course = "None";
                 };
 
                 responseObj.comment = $("#comments").val();
@@ -580,14 +587,7 @@
                     success : function (data) {
                         console.log(data);
                         $("#successMsg").show();
-                        $("#progressBar").hide();
-                        $("#kidsname").val('');
-                        $("#kidsage").val('');
-                        $("#name").val('');
-                        $("#email").val('');
-                        $("#phone").val('');
-                        $("#comments").val('')
-                        $("#prgSelection input[type='radio']").prop("checked", false);
+                          $("#progressBar").hide();
                     },
                     error: function () {
                         console.error("Sending failed");
