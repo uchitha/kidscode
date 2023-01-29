@@ -427,22 +427,22 @@
                                <div class="row" id="prgSelection">
                                    <div class="col-lg-3">
                                        <label class="radio-inline">
-                                         <input type="radio" name="inlineRadioOptions" id="prg" value="Inspire"> Inspire
+                                         <input type="radio" name="inlineRadioOptions" id="prg" value="Inspire" class="rdoption"> Inspire
                                        </label>
                                    </div>  
                                     <div class="col-lg-3">
                                        <label class="radio-inline">
-                                         <input type="radio" name="inlineRadioOptions" id="prg" value="Upskill"> Upskill
+                                         <input type="radio" name="inlineRadioOptions" id="prg" value="Upskill" class="rdoption"> Upskill
                                        </label>
                                    </div>
                                     <div class="col-lg-2">
                                        <label class="radio-inline">
-                                         <input type="radio" name="inlineRadioOptions" id="prg" value="Master"> Master
+                                         <input type="radio" name="inlineRadioOptions" id="prg" value="Master" class="rdoption"> Master
                                        </label>
                                    </div>
                                    <div class="col-lg-4">
                                        <label class="radio-inline">
-                                         <input type="radio" name="inlineRadioOptions" id="prg" value="None">Just keep me informed
+                                         <input type="radio" name="inlineRadioOptions" id="prg" value="None" class="rdoption">Just keep me informed
                                        </label>
                                        </div>
                                    </div>
@@ -588,8 +588,9 @@
                     success : function (data) {
                         console.log(data);
                         $("#successMsg").show();
-                        $("#progressBar").hide();
+                        $("#progressBar").hide();                       
                         $(':input[type="submit"]').prop('disabled', false);
+                         ClearInput();
                     },
                     error: function () {
                         console.error("Sending failed");
@@ -600,6 +601,16 @@
                 });
                 return false;
             }
+
+             function ClearInput(){
+                $("#kidsname").val('');
+                $("#kidsage").val('');
+                $("#name").val('');
+                $("#email").val('');
+                $("#phone").val('');
+                $("#comments").val('');
+                $('.rdoption').prop('checked', false);
+             }
 
         </script>
 		<!-- Global Site Tag (gtag.js) - Google Analytics -->
