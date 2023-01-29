@@ -526,6 +526,7 @@
 				},
 				errorClass : "form-error",
 				submitHandler: function(form) {
+                       $(':input[type="submit"]').prop('disabled', true);
 					submitForm();
 				  }
 				});
@@ -587,12 +588,14 @@
                     success : function (data) {
                         console.log(data);
                         $("#successMsg").show();
-                          $("#progressBar").hide();
+                        $("#progressBar").hide();
+                        $(':input[type="submit"]').prop('disabled', false);
                     },
                     error: function () {
                         console.error("Sending failed");
                         $("#failureMsg").show();
-                          $("#progressBar").hide();
+                        $("#progressBar").hide();
+                        $(':input[type="submit"]').prop('disabled', false);
                     }
                 });
                 return false;
