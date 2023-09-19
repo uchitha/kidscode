@@ -73,19 +73,18 @@
             <!-- /.container-fluid -->
         </nav>
         <header id="home">
-
-            <div class="header-content row">
+            <div class="header-content row" >
                 <div class="header-content-inner col-md-3"></div>
                 <div class="header-content-inner col-md-3"></div>
-                <div class="header-content-inner col-md-3 header-content-inner-text">
+                <div class="header-content-inner col-md-3 header-content-inner-text" id="header-content-inner-text" style="display: none;">
                      <br/>
                     <br/>
                     <br/>
                     <p class="inner-header">CREATORS not CONSUMERS</p>
                     <br/>
-                    <p>Coding, often called 'software,' has become a vital skill akin to Science and Mathematics, enabling individuals to wield a superhuman power to share intellectual capabilities on an unprecedented scale, driving exciting and important developments in our increasingly computer-dependent world.</p>
+                    <p><b>Coding</b> is a superpower that lets you create amazing things with computers. But most kids only use computers to consume media and ads.</p>
                     <br/>
-                    <p>Aussie Kids Code teaches children to create computer programs through engaging projects, promoting skills like problem-solving and teamwork. We inspire an appreciation for the creative process behind everyday items, shifting from <b>CONSUME</b> to <b>CREATE</b>.</p>
+                    <p>At <b>Aussie Kids Code</b>, we teach your kids how to code with fun and engaging projects. They will learn skills like logic, problem solving and teamwork. Let’s make our kids <b>Creators, not Consumers</b>. Join us today and give your kids a head start in the digital world!</p>
                 </div>
                 <div class="header-content-inner col-md-3"></div>
             </div>
@@ -508,7 +507,9 @@
                 $("#comments").val('');
                 $('.rdoption').prop('checked', false);
              }
-
+             $(document).ready(function() {
+                $("#header-content-inner-text").fadeIn(3000);
+            });
         </script>
 		<!-- Global Site Tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107428270-1"></script>

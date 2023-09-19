@@ -266,22 +266,34 @@ header .header-content .header-content-inner p {
 
 @media (max-width: 576px) {
     header  {
+        top:20px;
         background-image: url(../img/header-sm.png);
+        padding-bottom: 70px;
     }
 
     header .header-content .header-content-inner .inner-header {
         color: rgba(255,255,255);
-        /* margin-bottom: 0px; */
+        margin-bottom: 10px;
+        font-size: 2em;
     }
 
     header .header-content .header-content-inner p {
         color: rgba(255,255,255);
+        font-size: 1em;
     }
 
-    /* header .header-content-inner-text{
-        top:350px;
-    } */
+    header .header-content-inner-text{
+        top:180px;
+        margin-left:20px
+    }
+
+    header .header-content-inner-text div::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
  }
+
 
 .section-heading {
     margin-top: 0;
